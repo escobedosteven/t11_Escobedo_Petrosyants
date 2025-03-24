@@ -21,6 +21,7 @@ from t11_NPC import NPC
 from t11_player import Player
 
 
+
 class Game:
     def __init__(self):
         """
