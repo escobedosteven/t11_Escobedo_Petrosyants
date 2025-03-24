@@ -13,8 +13,8 @@ ___
 ```
     |                 | Monday | Wednesday | Friday |
     |-----------------|--------|-----------|--------|
-    | Driver          |        |           |        |
-    | Navigator       |        |           |        |
+    | Driver          | Alina       |           |        |
+    | Navigator       | Steven       |           |        |
     | Quality Control |        |           |        |
 ```
 
@@ -26,7 +26,9 @@ ___
     what each one represents:
 
 ```
-    **Replace This Text With Your Response**
+    **Class Game, NPC and Player. Class Game initializes the screen, and puts characteres there. Class NPC makes tacocat move randomly. Class Player allows the user to move\
+    its character around the screen
+    **
 ```
 
 2.b. Look more closely at the **t11_game.py** file. There are 8 lines; identify if they are 
@@ -37,14 +39,14 @@ ___
 (Some are more than one answer!)
 
 ```
-    self.size = 800, 600                              # **Replace This Text With Your Response**
-    self.running = True                               # **Replace This Text With Your Response**
-    pygame.init()                                     # **Replace This Text With Your Response**
-    self.screen = pygame.display.set_mode(self.size)  # **Replace This Text With Your Response**
-    self.clock = pygame.time.Clock()                  # **Replace This Text With Your Response**
-    self.player = Player(self.size)                   # **Replace This Text With Your Response**
-    self.good_npc = NPC(self.size)                    # **Replace This Text With Your Response**
-    self.screen.fill('#9CBEBA')                       # **Replace This Text With Your Response**
+    self.size = 800, 600                              # **instance parameters**
+    self.running = True                               # **methods calls within the class**
+    pygame.init()                                     # **method calls to another class or library**
+    self.screen = pygame.display.set_mode(self.size)  # **method calls within the class**
+    self.clock = pygame.time.Clock()                  # **method calls within the class**
+    self.player = Player(self.size)                   # **method calls to another class or library**
+    self.good_npc = NPC(self.size)                    # **method calls to another class or library**
+    self.screen.fill('#9CBEBA')                       # **method calls within the class**
 ```
 
 2.c. Parse through the `run()` method of **t11_game.py**. In particular, note how the game handles 
@@ -56,7 +58,8 @@ ___
 In your own words, describe how the four items above are accomplished in the Game class:
 
 ```
-    a) **Replace This Text With Your Response**
+    a) **
+    **
     b) **Replace This Text With Your Response**
     c) **Replace This Text With Your Response**
     d) **Replace This Text With Your Response**
