@@ -13,8 +13,8 @@ ___
 ```
     |                 | Monday | Wednesday | Friday |
     |-----------------|--------|-----------|--------|
-    | Driver          | Alina       |           |        |
-    | Navigator       | Steven       |           |        |
+    | Driver          | Alina  |  Steven   |        |
+    | Navigator       | Steven |  Alina    |        |
     | Quality Control |        |           |        |
 ```
 
@@ -59,11 +59,11 @@ ___
 In your own words, describe how the four items above are accomplished in the Game class:
 
 ```
-    a) **
-    **
-    b) **Replace This Text With Your Response**
-    c) **Replace This Text With Your Response**
-    d) **Replace This Text With Your Response**
+    a) **While the game is running, it checks to see if the player sprite collides with the given object(NPC).**
+    b) **In the game.py file, unless the sprites collide, the player and NPC will continue to move. It calls the
+    movement function from the other py files.**
+    c) **It uses the blits functions to erase the previous position, as to not have one continous line of sprites. **
+    d) **The game uses the self.clock.tick(24) to update the screen 24 times a second.**
 ```
 
 _Return to the Google Doc to continue the assignment._
@@ -76,7 +76,7 @@ _Return to the Google Doc to continue the assignment._
      How do you know?
 
 ```
-    **Replace This Text With Your Response**
+    **It inherits functionality from the Game Class. In the game.py it assigns the player to self.tuna**
 ```
 
 3.b. Sprites need two attributes to function: A surface and a rectangle. The surface (implemented in a `Surface` 
@@ -86,27 +86,32 @@ _Return to the Google Doc to continue the assignment._
      and explain what each line does. 
 
 ```
-    **Replace This Text With Your Response**
+    ** self.surf = pygame.image.load('images/tuna.png').convert_alpha() Loading the image into the sprite. 
+        self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)    Setting the color of the sprite
+        self.rect = self.surf.get_rect()                            Gets position of sprite 
+        self.rect.move_ip(self.screen_size[0]//2, self.screen_size[1]//2)       Moves area that sprite is drawn on 
+    **
 ```
 
 3.c. The `Player` class has only one method so far. Parse that code and docstring, and describe what it does:
 
 ```
-    **Replace This Text With Your Response**
+    **The method movement, says that if there is input from the keys, move it in the corresponding direction.**
 ```
 
 3.d. Similarly, the `NPC` class in **t11_NPC.py** also inherits the `Sprite` class from **pygame**, 
      but it does a little more than our `Player` class. Compare the two classes, and identify/describe the differences:
 
 ```
-    **Replace This Text With Your Response**
+    **The movement function is run by a player, and the get direction function uses conditioning to make the NPC
+    move on its own. **
 ```
 
 3.e. Of particular interest is how we keep the `NPC` on the screen. Describe how we're using 
     the `self.rect` attribute in the `get_direction()` method to keep the `NPC` visible.  
 
 ```
-    **Replace This Text With Your Response**
+    **The get_direction() gets the position of the sprite, and the self.rect moves where the sprite can be drawn.**
 ```
 
 _Return to the Google doc to continue the assignment._ 
