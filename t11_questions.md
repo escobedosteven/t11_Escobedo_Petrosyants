@@ -13,8 +13,8 @@ ___
 ```
     |                 | Monday | Wednesday | Friday |
     |-----------------|--------|-----------|--------|
-    | Driver          | Alina  |  Steven   |        |
-    | Navigator       | Steven |  Alina    |        |
+    | Driver          | Alina  |  Steven   |  Alina     |
+    | Navigator       | Steven |  Alina    |  Steven      |
     | Quality Control |        |           |        |
 ```
 
@@ -128,7 +128,7 @@ instead of an NPC. Debug any errors you get; the program should work, at this po
 4.a. How hard was it to create the child class, given the parent?
 
 ```
-    **Replace This Text With Your Response**
+    **Pretty hard -Steven **
 ```
 
 The parent class `NPC` currently holds attributes like the image used, which are actually more specific to 

@@ -17,7 +17,7 @@
 ####################################################################################
 
 import pygame
-from t11_NPC import NPC
+from t11_NPC import NPC, Good_NPC
 from t11_player import Player
 
 
@@ -36,7 +36,7 @@ class Game:
         self.screen.fill('#9CBEBA')
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
-        self.tacocat = NPC(self.size)
+        self.tacocat = Good_NPC(self.size)
 
 
     def run(self):

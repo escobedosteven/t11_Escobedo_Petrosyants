@@ -31,12 +31,6 @@ class NPC(pygame.sprite.Sprite):
         print("Spawning NPC")
         self.screen_size = screen_size
         super().__init__()
-        self.surf = pygame.image.load('images/tacocat.png').convert_alpha()
-        self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
-        self.rect = self.surf.get_rect()
-        self.rect.move_ip(self.screen_size[0]//4, self.screen_size[1]//4)
-        self.path = random.choice(self.directions)
-        self.position = [0,0]
 
     def get_direction(self):
         """
@@ -60,6 +54,17 @@ class NPC(pygame.sprite.Sprite):
             # Randomly change direction 5% of the time
             self.path = random.choice(self.directions)
 
+
+class Good_NPC(NPC):
+    def __init__(self,screen_size):
+        super().__init__(screen_size)
+        self.surf = pygame.image.load('images/tacocat.png').convert_alpha()
+        self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
+        self.rect = self.surf.get_rect()
+        self.rect.move_ip(self.screen_size[0] // 4, self.screen_size[1] // 4)
+        self.path = random.choice(self.directions)
+        self.position = [0, 0]
+
     def movement(self):
         """
         Moves the NPC around.
@@ -81,6 +86,37 @@ class NPC(pygame.sprite.Sprite):
 
         self.get_direction()
 
-class Good_NPC(NPC):
-    def __init__(self):
+
+
+class Bad_NPC(NPC):
+    def __init__(self, screen_size):
+
+        self.screen_size = screen_size
         super().__init__()
+        self.position = [-225, -225]
+
+    def movement(self):
+        if self.rect.left <= 1:
+            # Left
+            self.path = "north"
+            self.path = "stop"
+            self.path = "east"
+        if self.rect.right >= self.screen_size[1]:
+            # Right
+            self.path = "north"
+            self.path = "west"
+
+    def direction(self):
+
+        if self.path == "east":
+            self.rect.move_ip(self.move_distance, 0)
+            self.position[0] -= self.move_distance
+        if self.path == "west":
+            self.rect.move_ip(-self.move_distance, 0)
+            self.position[0] += self.move_distance
+
+
+
+
+
+
